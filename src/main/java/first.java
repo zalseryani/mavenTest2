@@ -17,6 +17,11 @@ public class first
         System.out.println("The addition result is : "+additionResult);
     }
 
+    static void printing()
+    {
+        System.out.println("Greetings");
+    }
+
 
     static int multiplication(int x, int y)
     {

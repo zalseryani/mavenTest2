@@ -14,5 +14,8 @@ public class firstTest
     public void firstClassMultiMethod()
     {
         Assert.assertEquals(10, first.multiplication(5,2));
+
     }
+
+
 }
