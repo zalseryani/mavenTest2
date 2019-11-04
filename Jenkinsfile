@@ -16,6 +16,23 @@ pipeline
                 bat "mvn clean"
             }
         }
+        
+         stage('---compile---')
+        {
+            steps 
+            {
+                bat "mvn compile"
+            }
+        }
+        
+        
+         stage('---package---')
+        {
+            steps 
+            {
+                bat "mvn package"
+            }
+        }
     }
 }
             
