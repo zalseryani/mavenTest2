@@ -1,27 +1,42 @@
-pipeline {
+pipeline 
+{
     agent any
-    stages {
-        stage('---clean---') {
-           steps {
+    stages 
+    {
+        stage('---clean---') 
+        {
+           steps 
+            {
                 
-                withMaven (maven: "maven_3_6_2"){
+                withMaven (maven: "maven_3_6_2")
+                {
                     bat "mvn clean"
-                }
-        }
-        stage('--test--') {
-            steps {
-                
-                withMaven (maven: "maven_3_6_2"){
-                    bat "mvn test"
                 }
             }
         }
-        stage('--package--') {
-            steps {
+        stage('--test--') 
+        {
+            steps
+             {  
+                withMaven (maven: "maven_3_6_2")
+                {
+                    bat "mvn test"
+                }
+             }
+        }
+        stage('--package--') 
+        {
+            steps 
+            {
                 
-                withMaven (maven: "maven_3_6_2"){
+                withMaven (maven: "maven_3_6_2")
+                {
                     bat "mvn package"
                 }
+            }
         }
     }
 }
+
+
+    
