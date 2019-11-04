@@ -7,7 +7,10 @@ pipeline
         {
             steps 
             {
-                bat 'mvn clean'
+                withMaven: (maven: maven_3_6_2)
+                {
+                    bat "mvn clean"
+                }
             }
         }
     }
