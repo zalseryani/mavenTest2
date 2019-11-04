@@ -6,17 +6,26 @@ pipeline
   {
      stage 'cleaning and compiling stage'
      {
-        bat mvn "clean compile"
+        steps 
+       {  
+          bat "mvn clean compile"
+       }  
      }
      
      stage 
      {
-        bat "mvn test"
+        steps 
+       {  
+          bat "mvn test"
+       } 
      }
      
      stage 
      {
-        bat "mvn package"
+         steps 
+       {  
+          bat "mvn package"
+       }
      }
   }
 }
