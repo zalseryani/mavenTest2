@@ -2,19 +2,26 @@ pipeline {
     agent any
     stages {
         stage('---clean---') {
-            steps {
-                bat "mvn clean"
-            }
+           steps {
+                
+                withMaven (maven: "maven_3_6_2"){
+                    bat "mvn clean"
+                }
         }
         stage('--test--') {
             steps {
-                bat "mvn test"
+                
+                withMaven (maven: "maven_3_6_2"){
+                    bat "mvn test"
+                }
             }
         }
         stage('--package--') {
             steps {
-                bat "mvn package"
-            }
+                
+                withMaven (maven: "maven_3_6_2"){
+                    bat "mvn package"
+                }
         }
     }
 }
