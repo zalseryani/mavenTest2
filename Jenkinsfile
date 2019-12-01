@@ -4,8 +4,8 @@ pipeline
     
     tools 
     {
-        maven 'Maven 3.6.2'
-        jdk "Java"
+        maven 'maven'
+        jdk "java"
     }
     
     stages 
